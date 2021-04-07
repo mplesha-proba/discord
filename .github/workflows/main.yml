@@ -1,15 +1,13 @@
-# This is a basic workflow to help you get started with Actions
-
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '*/5 * * * *'
 
 jobs:
-  ping_glitch:
-    name: Scheduled message
+  discord_message:
+    name: Discord message
     runs-on: ubuntu-latest
     steps:
-      - name: time
+      - name: ping
         run: |
-          date +"%T"
+          echo ok
