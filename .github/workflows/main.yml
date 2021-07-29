@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: send message
         run: |
-           curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"Согоднішня ретроспектива, 9-го спрінта, відбудеться о 13:00\"}" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
+           curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"Согодні о 13:00 відбудеться ретроспектива 14-го спрінта\"}" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
