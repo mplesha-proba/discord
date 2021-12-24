@@ -1,4 +1,6 @@
 on:
+  schedule:
+    - cron: '53 4 27 12 *'
   workflow_dispatch:
 
 jobs:
@@ -8,4 +10,4 @@ jobs:
     steps:
       - name: send message
         run: |
-           curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"Добрий ранок марафонці, ретроспектива 6-го спрінта буде сьогодні о 13:00\"}" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
+           curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"Привіт марафонці, оскільки сьогодні вихідний 🙂, ретроспектива 9-го спрінта відбудеться завтра, 28.12-го, о 13:00\"}" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
