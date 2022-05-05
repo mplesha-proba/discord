@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: send message
         run: |
-           curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"Доброго дня марафонці! Сьогодні о 13:00 ми проведемо чергову ретроспективу 🙂! Перед ретроспективою - зустріч з представниками сертифікаційного центру. \"}" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
+           curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"Доброго дня марафонці! Сьогодні о 13:00 ми проведемо чергову ретроспективу 🙂!\"}" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
