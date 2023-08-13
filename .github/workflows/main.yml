@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: send message
         run: |
-           echo  -H "Content-Type: application/json" -X POST -d "{\"content\": \"${{ vars.DISCORD_TEXT }}\" }" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
+           curl  -H "Content-Type: application/json" -X POST -d "{\"content\": \"${{ vars.DISCORD_TEXT }}\" }" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
           
