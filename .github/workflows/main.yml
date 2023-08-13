@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: send message
         run: |
-           curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"Привіт всім! Завтра, 03.08, о 12:30, у нас ретроспектива 8-го спринта.\"}" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
+           curl -H "Content-Type: application/json" -X POST -d "{\"content\": {{ variables.DISCORD_TEXT }} }" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
           
