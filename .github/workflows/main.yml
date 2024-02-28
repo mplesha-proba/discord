@@ -10,6 +10,5 @@ jobs:
     steps:
       - name: send message
         run: |
-           curl  -H "Content-Type: application/json" -X PATCH -d "{\"content\": \"${{ vars.DISCORD_TEXT }}\" }" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}/messages/1212371280313978921
-           # curl  -H "Content-Type: application/json" -X POST -d "{\"content\": \"${{ vars.DISCORD_TEXT }}\" }" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
+           curl  -H "Content-Type: application/json" -X POST -d "{\"content\": \"${{ vars.DISCORD_TEXT }}\" }" https://discord.com/api/webhooks/${{ secrets.DISCORD_ID }}/${{ secrets.DISCORD_TOKEN }}
           
