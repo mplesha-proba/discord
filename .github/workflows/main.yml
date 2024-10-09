@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '04 09 25 09 *'
+    - cron: '04 09 09 10 *'
   workflow_dispatch:
 
 jobs:
